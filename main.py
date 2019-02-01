@@ -7,13 +7,14 @@ import pylivestream
 # get data from wikipedia.
 
 def getRandom():
-    ranPageName = wikipedia.random()
-    getData(ranPageName)
+    for i in range(11):
+        if (i < 10):
+            ranPageName = wikipedia.random()
+            getData(ranPageName)
+            i = 0
 
 def getData(ranPageName):
     pagedata = wikipedia.summary(ranPageName)
-    for i in len(pagedata):
-        # parse through the data and remove the pronounciation letters
     saySumm(pagedata)
 
 #------------------------------------------------------
@@ -26,6 +27,8 @@ def saySumm(pagedata):
 
 #------------------------------------------------------
 # stream the audio to youtube
+
+# def capAudio():
 
 
 

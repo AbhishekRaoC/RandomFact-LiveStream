@@ -12,6 +12,8 @@ def getRandom():
 
 def getData(ranPageName):
     pagedata = wikipedia.summary(ranPageName)
+    for i in len(pagedata):
+        # parse through the data and remove the pronounciation letters
     saySumm(pagedata)
 
 #------------------------------------------------------
@@ -25,8 +27,7 @@ def saySumm(pagedata):
 #------------------------------------------------------
 # stream the audio to youtube
 
-stream = pylivestream.Screenshare(youtube)
-stream.startlive()
+
 
 
 while True:
